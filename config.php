@@ -8,6 +8,10 @@ define("TITLE", "WieseSamuel");
 define("VERSION", "0.1");
 define("PRODUCTION", false);
 
+// client
+// use cookie language or the default: german
+define('LANG', $_COOKIE["language"] ?? 'de-DE');
+
 // sql
 $host = "localhost";
 $user = "wiesesamuel";
