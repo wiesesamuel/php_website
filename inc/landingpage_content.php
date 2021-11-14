@@ -31,7 +31,7 @@
                         <strong class="d-inline-block mb-2 text-success">[%tr%]Work[%/tr%]</strong>
                         <h3 class="mb-0">[%tr%]Resume[%/tr%]</h3>
                         <p class="mb-auto">[%tr%]Resume_Teaser[%/tr%]</p>
-                        <a href="<?php echo HOST . '/' . translate(ROOT_PATH . '/sites/resume.php') ?>" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
+                        <a href="<?php echo HOST . '/resume.php'; ?>" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img src="/img/suit.jpeg" class="thumbnail" alt="screenshot">
@@ -52,23 +52,6 @@
                     </div>
                 </div>
             </div>
-<!--
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">[%tr%][%/tr%]</strong>
-                        <h3 class="mb-0">[%tr%][%/tr%]</h3>
-                        <p class="mb-auto">[%tr%][%/tr%]</p>
-                        <a href="#" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img src="/img/resume-thumbnail.png" class="thumbnail" alt="screenshot">
-                    </div>
-                </div>
-            </div>
--->
         </div>
     </main>
-
-</div>
 </div>

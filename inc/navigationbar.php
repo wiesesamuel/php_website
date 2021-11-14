@@ -41,7 +41,7 @@
             <button type="button" class="btn btn-outline-light d-inline-block justify-content-md-end" style="width: fit-content;"
                     onclick="document.getElementById('login_website').style.display='block'">[%tr%]Login[%/tr%]</button>
             <?php
-            require ROOT_PATH . '/' . translate(ROOT_PATH . "/sites/login_popup.php");
+            require ROOT_PATH . '/' . translate(ROOT_PATH . "/inc/login_popup.php");
             ?>
 
             <!--

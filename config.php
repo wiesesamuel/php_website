@@ -1,4 +1,8 @@
 <?php
+// server
+define('ROOT_PATH', $_SERVER["DOCUMENT_ROOT"]);
+define('HOST', 'http://localhost:8088');
+
 // software
 define("TITLE", "WieseSamuel");
 define("VERSION", "0.1");

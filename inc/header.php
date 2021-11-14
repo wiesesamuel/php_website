@@ -17,6 +17,3 @@ include('inc/sql.php');
 
 </head>
 <body>
-<?php
-require translate(ROOT_PATH . "/sites/navigationbar.php");
-?>

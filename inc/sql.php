@@ -1,5 +1,4 @@
 <?php
-require('config.php');
 
 // connect to db
 $db = mysqli_connect($host, $user, $pass);
