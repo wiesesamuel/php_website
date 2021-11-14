@@ -1,16 +1,14 @@
 <div id="scoped-navigationbar">
-
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="/css/navigationbar.css" type="text/css" rel="stylesheet">
     <link href="/js/navigationbar.js" type="text/js" rel="script">
+
     <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
+
         <a class="navbar-brand" href="#"><img src="/img/wiese.png" alt="Wiese" height="51" width="68"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
         <div class="collapse navbar-collapse w-100 order-1" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -24,8 +22,8 @@
                 </li>
             </ul>
         </div>
-        <div class="collapse navbar-collapse w-100 order-3" id="navbarCollapse">
 
+        <div class="collapse navbar-collapse w-100 order-3" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
@@ -42,17 +40,16 @@
             </ul>
             <button type="button" class="btn btn-outline-light d-inline-block justify-content-md-end" style="width: fit-content;"
                     onclick="document.getElementById('login_website').style.display='block'">[%tr%]Login[%/tr%]</button>
-
             <?php
             require translate(ROOT_PATH . "/sites/login_popup.php");
             ?>
+
             <!--
             <form class="form-inline mt-2 mt-md-0 justify-content-md-end">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             -->
-
 
         </div>
     </div>
