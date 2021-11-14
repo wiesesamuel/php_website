@@ -34,7 +34,7 @@
                         <a href="<?php echo HOST . '/' . translate(ROOT_PATH . '/sites/resume.php') ?>" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img src="/img/profile-thumbnail.png" class="thumbnail" alt="screenshot">
+                        <img src="/img/suit.jpeg" class="thumbnail" alt="screenshot">
                     </div>
                 </div>
             </div>
