@@ -1,10 +1,3 @@
-<?php
-require translate(ROOT_PATH . "/sites/navigationbar.php");
-?>
-
-
-
-
 <!-- nur bei
     Tracking-Cookies
     Targeting-Cookies

@@ -1,0 +1,13 @@
+.brand-wiese {
+    background-image: url('../img/wiese.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: contain;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
