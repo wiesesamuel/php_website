@@ -1,7 +1,7 @@
 <?php
 require("config.php");
 // use cookie language or the default: german
-define('LANG', $_COOKIE["lang"] ?? 'de-DE');
+define('LANG', $_COOKIE["language"] ?? 'de-DE');
 
 function translate($file)
 {

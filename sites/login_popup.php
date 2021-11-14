@@ -1,8 +1,6 @@
 <div id="scoped-login">
     <link rel="stylesheet" href="/css/login.css" type="text/css">
     <link rel="javascript" href="/js/login.js" type="text/js">
-    <button onclick="document.getElementById('login_website').style.display='block'" style="width:auto;">[%tr%]Login[%/tr%]</button>
-
     <div id="login_website" class="modal">
 
         <form class="modal-content animate" action="/action_page.php" method="post">

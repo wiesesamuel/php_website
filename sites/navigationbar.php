@@ -24,19 +24,28 @@
                 </li>
             </ul>
         </div>
-            <div class="collapse navbar-collapse w-100 order-3" id="navbarCollapse">
+        <div class="collapse navbar-collapse w-100 order-3" id="navbarCollapse">
 
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                        <li class="dropdown-item" href="#"><a>Deutsch</a></li>
-                        <li class="dropdown-item" href="#"><a>English</a></li>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
+                        <li class="dropdown-item" href="#"
+                            onclick="document.cookie = 'language=de-DE'; window.location.reload(); return false;"><a>Deutsch</a>
+                        </li>
+                        <li class="dropdown-item" href="#"
+                            onclick="document.cookie = 'language=en-EN'; window.location.reload(); return false;"><a>English</a>
+                        </li>
                     </ul>
                     <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">[%tr%]Language[%/tr%]</a>
                 </li>
             </ul>
-            <button type="button" class="btn btn-outline-light justify-content-md-end">[%tr%]Login[%/tr%]</button>
+            <button type="button" class="btn btn-outline-light d-inline-block justify-content-md-end" style="width: fit-content;"
+                    onclick="document.getElementById('login_website').style.display='block'">[%tr%]Login[%/tr%]</button>
+
+            <?php
+            require translate(ROOT_PATH . "/sites/login_popup.php");
+            ?>
             <!--
             <form class="form-inline mt-2 mt-md-0 justify-content-md-end">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
