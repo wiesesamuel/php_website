@@ -31,10 +31,10 @@
                         <strong class="d-inline-block mb-2 text-success">[%tr%]Work[%/tr%]</strong>
                         <h3 class="mb-0">[%tr%]Resume[%/tr%]</h3>
                         <p class="mb-auto">[%tr%]Resume_Teaser[%/tr%]</p>
-                        <a href="#" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
+                        <a href="<?php echo HOST . '/' . translate(ROOT_PATH . '/sites/resume.php') ?>" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img src="/img/resume-thumbnail.png" class="thumbnail" alt="screenshot">
+                        <img src="/img/profile-thumbnail.png" class="thumbnail" alt="screenshot">
                     </div>
                 </div>
             </div>
