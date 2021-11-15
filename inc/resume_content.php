@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
     <link href="/css/resume.css" rel="stylesheet"/>
     <link href="/css/brand.css" rel="stylesheet"/>
+    <link href="/css/navigationbar.css" type="text/css" rel="stylesheet">
+
 
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -28,7 +30,9 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">[%tr%]Skills[%/tr%]</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">[%tr%]Interests[%/tr%]</a>
                 </li>
+                <!--
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">[%tr%]Awards[%/tr%]</a></li>
+                -->
             </ul>
         </div>
     </nav>

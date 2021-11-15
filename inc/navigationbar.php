@@ -1,4 +1,5 @@
 <div id="scoped-navigationbar">
+    <link href="/css/navigationbar.css" type="text/css" rel="stylesheet">
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4" aria-label="Third navbar example">
         <div class="container-fluid">
