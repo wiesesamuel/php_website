@@ -13,7 +13,7 @@ include('inc/sql.php');
     <title><?php echo TITLE ?></title>
     <link rel="icon" href="/img/logo.png" type="image/png">
 
-    <link href="../css/style.css?v=<?php echo VERSION ?>" rel="stylesheet" type="text/css">
+    <link href="/css/style.css?v=<?php echo VERSION ?>" rel="stylesheet" type="text/css">
 
 </head>
 <body>
