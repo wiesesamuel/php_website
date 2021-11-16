@@ -13,3 +13,5 @@
 .navbar-dark .navbar-nav .nav-link.disabled{color:rgba(255,255,255,.25);}
 .navbar-dark .navbar-nav .nav-link.active{color:#fff;}
 .navbar-dark .navbar-toggler{color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.1);}
+
+#scoped-navigationbar, .bg-dark{background-color:#343a40!important;}
