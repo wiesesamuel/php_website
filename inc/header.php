@@ -11,7 +11,7 @@ include('inc/sql.php');
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title><?php echo TITLE ?></title>
-    <link rel="icon" href="/img/logo.png" type="image/png">
+    <link rel="icon" href="/img/wiese.png" type="image/png">
 
     <link href="/css/style.css?v=<?php echo VERSION ?>" rel="stylesheet" type="text/css">
 

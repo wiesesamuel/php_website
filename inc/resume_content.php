@@ -1,5 +1,4 @@
 <div>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
@@ -7,8 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
     <link href="/css/resume.css" rel="stylesheet"/>
     <link href="/css/brand.css" rel="stylesheet"/>
-    <link href="/css/navigationbar.css" type="text/css" rel="stylesheet">
-
 
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
