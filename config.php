@@ -2,6 +2,7 @@
 // server
 define('ROOT_PATH', $_SERVER["DOCUMENT_ROOT"]);
 define('HOST', 'http://localhost:8088');
+//define('HOST', 'http://wiesesamuel.de');
 
 // software
 define("TITLE", "WieseSamuel");
@@ -19,6 +20,6 @@ $database = "wiesesamuel";
 $pass = "iahf0987309m90m";
 
 // page
-define('ENABLED_FOTO', true);
+define('ENABLED_FOTO', false);
 define('ENABLED_CINECAL', false);
 define('ENABLED_LOGIN', false);
