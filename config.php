@@ -17,3 +17,8 @@ $host = "localhost";
 $user = "wiesesamuel";
 $database = "wiesesamuel";
 $pass = "iahf0987309m90m";
+
+// page
+define('ENABLED_FOTO', true);
+define('ENABLED_CINECAL', false);
+define('ENABLED_LOGIN', false);
