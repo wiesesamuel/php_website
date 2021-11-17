@@ -1,4 +1,5 @@
 <?php
+if (!ENABLE_SQL) {return;}
 
 // connect to db
 $db = mysqli_connect($host, $user, $pass);

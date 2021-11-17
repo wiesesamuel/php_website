@@ -5,10 +5,12 @@ if (PRODUCTION) {
     define('ROOT_PATH', '/usr/share/cinecal');
     define('HOST', 'http://wiesesamuel.de');
     define('OBFUSCATE', false);
+    define('ENABLE_SQL', false);
 } else {
     define('ROOT_PATH', $_SERVER["DOCUMENT_ROOT"]);
     define('HOST', 'http://localhost:8088');
     define('OBFUSCATE', false);
+    define('ENABLE_SQL', false);
 }
 
 // server
