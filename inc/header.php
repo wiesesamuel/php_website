@@ -4,8 +4,6 @@ include('inc/sql.php');
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <script src="/js/bootstrap.bundle.min.js"></script>
 

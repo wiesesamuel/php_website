@@ -15,7 +15,6 @@ function cache($fileRelativePath, $absolutPath=false)
     if (!file_exists($cacheAbsolutPath) or !PRODUCTION) {
 
         $input = file_get_contents(ROOT_PATH . '/' . $fileRelativePath);
-        $output = null;
 
         switch ($extension) {
             case ('php'):
