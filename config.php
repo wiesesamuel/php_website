@@ -1,5 +1,5 @@
 <?php
-define("PRODUCTION", false);
+define("PRODUCTION", $_SERVER["DOCUMENT_ROOT"] == '/usr/share/cinecal');
 
 if (PRODUCTION) {
     define('ROOT_PATH', '/usr/share/cinecal');
