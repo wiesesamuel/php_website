@@ -1,21 +1,20 @@
 <?php
 require ROOT_PATH . '/libary/hunter-php-javascript-obfuscator/original/HunterObfuscator.php';
 
-function cacheAndGetAbsolutePath($file)
-{
-    return ROOT_PATH . '/' . cache($file);
-}
-
-function cache($file)
+function cache($fileRelativePath, $absolutPath=false)
 {
     // get file type
-    $extension = pathinfo($file)['extension'];
-    $cache_file_path = 'cache/' . basename($file, $extension) . '_' . VERSION . $extension;
+    $extension = pathinfo($fileRelativePath)['extension'];
+
+    // generate cache file name
+    $nameAddition = $extension == 'php' ? LANG . '_' : '';
+    $cacheRelativePath = 'cache/' . $nameAddition . basename($fileRelativePath, '.' . $extension) . '_' . VERSION . '.' . $extension;
+    $cacheAbsolutPath = ROOT_PATH . '/' . $cacheRelativePath;
 
     // (re)build cache?
-    if (!file_exists($cache_file_path) or !PRODUCTION) {
+    if (!file_exists($cacheAbsolutPath) or !PRODUCTION) {
 
-        $input = file_get_contents(ROOT_PATH . $file);
+        $input = file_get_contents(ROOT_PATH . '/' . $fileRelativePath);
         $output = null;
 
         switch ($extension) {
@@ -34,13 +33,13 @@ function cache($file)
                 }
             // when no extension routine is defined (or not obfuscating), return same file
             default:
-                return $file;
+                return $absolutPath? ROOT_PATH . '/' . $fileRelativePath : $fileRelativePath;
         }
         // save file
-        file_put_contents($cache_file_path, $output, LOCK_EX);
+        file_put_contents($cacheAbsolutPath, $output, LOCK_EX);
     }
     // return path
-    return $cache_file_path;
+    return $absolutPath? $cacheAbsolutPath : $cacheRelativePath;
 }
 
 function rm_pattern($input, ...$pattern)
@@ -59,27 +58,27 @@ function obfuscateJSorHTML($input, $html = false)
     return $hunter->Obfuscate();
 }
 
-function translate($file)
+function translate($input)
 {
-    // get translation file
-    $lang_file = 'lang/' . LANG . '.ini';
+    // translation file
+    $langINIfileAbsolutePath = ROOT_PATH . '/lang/' . LANG . '.ini';
 
     // convert .ini file into .php file
-    $lang_file_php = '/cache/' . LANG . '_' . VERSION . '.php';
-    if (!file_exists($lang_file_php) or !PRODUCTION) {
-        file_put_contents($lang_file_php, '<?php $strings=' .
-            var_export(parse_ini_file($lang_file), true) . ';', LOCK_EX);
+    $langPHPfileAbsolutePath = ROOT_PATH . '/cache/' . LANG . '_' . VERSION . '.php';
+    if (!file_exists($langPHPfileAbsolutePath) or !PRODUCTION) {
+        file_put_contents($langPHPfileAbsolutePath, '<?php $strings=' .
+            var_export(parse_ini_file($langINIfileAbsolutePath), true) . ';', LOCK_EX);
     }
 
     // translate .php into localized .php file
-    $tr = function ($match) use (&$lang_file_php) {
+    $tr = function ($match) use (&$langPHPfileAbsolutePath) {
         static $strings = null;
-        if ($strings === null) require($lang_file_php);
+        if ($strings === null) require($langPHPfileAbsolutePath);
         return isset($strings[$match[1]]) ? $strings[$match[1]] : $match[1];
     };
 
     // translate by replacing all [%tr%]abc[%/tr%] with tr()
-    return preg_replace_callback('/\[%tr%\](.*?)\[%\/tr%\]/', $tr, file_get_contents($file));
+    return preg_replace_callback('/\[%tr%\](.*?)\[%\/tr%\]/', $tr, $input);
 }
 
 // TODO: minify css via https://github.com/mrclay/minify
