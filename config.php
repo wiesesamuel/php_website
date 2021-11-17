@@ -2,7 +2,7 @@
 // server
 define('ROOT_PATH', $_SERVER["DOCUMENT_ROOT"]);
 //define('ROOT_PATH', '/usr/share/cinecal');
-define('HOST', 'http://localhost:8088');
+define('HOST', 'http://localhost:8077');
 //define('HOST', 'http://wiesesamuel.de');
 
 // software
