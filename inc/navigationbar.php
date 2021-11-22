@@ -22,8 +22,8 @@
                            href="<?php echo HOST . '/photography.php'; ?>">[%tr%]Photograph[%/tr%]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo ENABLED_CINECAL ? null : 'disabled' ?>"
-                           href="<?php echo HOST . '/cinecal.php'; ?>">[%tr%]CineCal[%/tr%]</a>
+                        <a class="nav-link <?php echo (ENABLED_CINECAL OR isset($_SESSION['userid'])) ? null : 'disabled' ?>"
+                           href="<?php echo HOST . '/cinecal/'; ?>">[%tr%]CineCal[%/tr%]</a>
                     </li>
                 </ul>
 
@@ -47,7 +47,7 @@
                 </ul>
                 <button type="button"
                         class="btn btn-outline-light justify-content-md-end <?php echo ENABLED_LOGIN ? null : 'disabled' ?>"
-                        onclick="document.getElementById('login_website').style.display='block'">[%tr%]Login[%/tr%]
+                        onclick="location.href='<?php echo HOST . '/login.php' ?>';">[%tr%]Login[%/tr%]
                 </button>
                 <!--
                 <div>

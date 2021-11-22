@@ -6,11 +6,15 @@ if (PRODUCTION) {
     define('HOST', 'http://wiesesamuel.de');
     define('OBFUSCATE', false);
     define('ENABLE_SQL', false);
+    define('ENABLE_USER_REGISTRATION', false);
+    define('ENABLE_USER_LOGIN', true);
 } else {
     define('ROOT_PATH', $_SERVER["DOCUMENT_ROOT"]);
-    define('HOST', 'http://localhost:8088');
+    define('HOST', 'http://localhost:8077');
     define('OBFUSCATE', false);
     define('ENABLE_SQL', false);
+    define('ENABLE_USER_REGISTRATION', true);
+    define('ENABLE_USER_LOGIN', true);
 }
 
 // server
@@ -30,4 +34,6 @@ $pass = "iahf0987309m90m";
 // page
 define('ENABLED_FOTO', false);
 define('ENABLED_CINECAL', false);
-define('ENABLED_LOGIN', false);
+define('ENABLED_LOGIN', true);
+
+// feature

@@ -45,7 +45,7 @@
                         <strong class="d-inline-block mb-2 text-success">[%tr%]Work[%/tr%]</strong>
                         <h3 class="mb-0">[%tr%]CineCal[%/tr%]</h3>
                         <p class="mb-auto">[%tr%]CineCal_Teaser[%/tr%]</p>
-                        <a href="#" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
+                        <a href="<?php echo (ENABLED_CINECAL OR isset($_SESSION['userid'])) ? HOST . '/cinecal/' : '#'; ?>" class="stretched-link">[%tr%]Home_Continue[%/tr%]</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img src="/img/pexels-pavel-danilyuk-7234304-thumbnail.jpg" class="thumbnail" alt="screenshot">

@@ -1,5 +1,5 @@
 <?php
-include('inc/sql.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <head>
