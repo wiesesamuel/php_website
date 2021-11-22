@@ -23,6 +23,7 @@ if (isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user['email'] == $email && password_verify($password, $user['password'])) {
         $_SESSION['userid'] = $user['id'];
+        $_SESSION['cinecal'] = true;
         $errorMessage = 'Login erfolgreich.';
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";

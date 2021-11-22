@@ -23,7 +23,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo (ENABLED_CINECAL OR isset($_SESSION['userid'])) ? null : 'disabled' ?>"
-                           href="<?php echo HOST . '/cinecal/'; ?>">[%tr%]CineCal[%/tr%]</a>
+                           href="<?php echo HOST . '/cinecal/?cinema_id=1'; ?>">[%tr%]CineCal[%/tr%]</a>
                     </li>
                 </ul>
 

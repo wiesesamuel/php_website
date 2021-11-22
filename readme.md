@@ -3,8 +3,10 @@
     git reset --hard && git pull  
 
 # SQL
+
+
     mysql -e "
-    CREATE USER 'wiesesamuel'@'localhost' IDENTIFIED BY 'iahf0987309m90m'; 
+    CREATE USER 'wiesesamuel'@'localhost' IDENTIFIED BY 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; 
     " &&
     mysql -e "
     CREATE DATABASE wiesesamuel;
@@ -36,4 +38,6 @@
  
       nano /usr/share/cinecal/config.php  
 
+# one liner init
 
+    cd /usr/share/cinecal && rm -rf ./*  && rm -rf ./.* && git clone https://samuelwiese@bitbucket.org/samuelwiese/wiesesamuel-website.git ./ && git clone https://samuelwiese@bitbucket.org/samuelwiese/cinecal.git cinecal && chown -R www-data:www-data /usr/share/cinecal && find /usr/share/cinecal -type d -print0 | xargs -0 chmod 0755 && find /usr/share/cinecal -type f -print0 | xargs -0 chmod 0644    
