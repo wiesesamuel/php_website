@@ -2,6 +2,24 @@
 
     git reset --hard && git pull  
 
+# SQL
+    mysql -e "
+    CREATE USER 'wiesesamuel'@'localhost' IDENTIFIED BY 'iahf0987309m90m'; 
+    " &&
+    mysql -e "
+    CREATE DATABASE wiesesamuel;
+    " &&
+    mysql -e "
+    GRANT ALL PRIVILEGES ON wiesesamuel.* TO 'wiesesamuel'@'localhost' WITH GRANT OPTION;
+    " &&
+    mysql -e "
+    FLUSH PRIVILEGES;
+    " &&
+    mysql -e "
+    wiesesamuel < wiesesamuel.sql;
+    "
+
+
 # Server Setup
 
 * server log:
@@ -17,3 +35,5 @@
 * not working:
  
       nano /usr/share/cinecal/config.php  
+
+

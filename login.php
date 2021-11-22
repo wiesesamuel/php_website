@@ -5,7 +5,6 @@ if (!ENABLE_USER_LOGIN) {
     return;
 }
 
-session_start();
 require ROOT_PATH . '/inc/sql.php';
 require ROOT_PATH . '/inc/cache.php';
 require cache('/inc/header.php');

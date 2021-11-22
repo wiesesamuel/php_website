@@ -3,7 +3,6 @@ require 'config.php';
 require ROOT_PATH . '/inc/cache.php';
 require cache('/inc/header.php');
 
-session_start();
 session_destroy();
 
 require cache('/inc/navigationbar.php');
